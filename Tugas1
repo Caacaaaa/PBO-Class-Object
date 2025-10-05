@@ -4,4 +4,24 @@ public class pasien{
   private int umur;
   private String penyakit;
 
+  publuc pasien(){
+    this.nama = "Hanni";
+    this.umur = "20";
+    this.penyakit = "Flu"
+  }
+
+  public pasien(String nama, int umur, String penyakit){
+    this.nama = nama;
+    this.umur = umur;
+    this penyakit = penyakit;
+  }
+
+  public void tampilkanData(boolean tampilkanPenyakit){
+    System.out.println("Nama Pasien: " + nama);
+    System.out.println("Umur: " + umur + "tahun");
+    if (tampilkanPenyakut){
+        System.out.println("Penyakit: " + penyakit);
+    }else{
+        System.out.println("Penyakit: Tidak diketahui");
+  }
 }
