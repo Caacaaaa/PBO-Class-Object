@@ -4,7 +4,7 @@ public class pasien{
   private int umur;
   private String penyakit;
 
-  publuc pasien(){
+  public pasien(){
     this.nama = "Hanni";
     this.umur = "20";
     this.penyakit = "Flu"
@@ -24,4 +24,17 @@ public class pasien{
     }else{
         System.out.println("Penyakit: Tidak diketahui");
   }
+}
+
+public static void main(String[] args){
+  pasien p1 = new pasien();
+  pasien p2 = new pasien("Haerin", 21, "Demam");
+
+  System.out.println("Pasien 1");
+  p1.tampilkanData();
+  System.out.println("Pasien 2");
+  p2.tampilkanData();
+
+  System.out.println("Pasien 2 (nama dan umur)");
+  p2.tampilkanData(false)
 }
