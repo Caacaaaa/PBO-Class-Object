@@ -1,25 +1,25 @@
-public class pasien{
+public class Pasien{
 
   private String nama;
   private int umur;
   private String penyakit;
 
-  public pasien(){
+  public Pasien(){
     this.nama = "Hanni";
-    this.umur = "20";
-    this.penyakit = "Flu"
+    this.umur = 20;
+    this.penyakit = "Flu";
   }
 
-  public pasien(String nama, int umur, String penyakit){
+  public Pasien(String nama, int umur, String penyakit){
     this.nama = nama;
     this.umur = umur;
-    this penyakit = penyakit;
+    this.penyakit = penyakit;
   }
 
   public void tampilkanData(boolean tampilkanPenyakit){
     System.out.println("Nama Pasien: " + nama);
     System.out.println("Umur: " + umur + "tahun");
-    if (tampilkanPenyakut){
+    if (tampilkanPenyakit){
         System.out.println("Penyakit: " + penyakit);
     }else{
         System.out.println("Penyakit: Tidak diketahui");
@@ -27,8 +27,8 @@ public class pasien{
 }
 
 public static void main(String[] args){
-  pasien p1 = new pasien();
-  pasien p2 = new pasien("Haerin", 21, "Demam");
+  Pasien p1 = new Pasien();
+  Pasien p2 = new Pasien("Haerin", 21, "Demam");
 
   System.out.println("Pasien 1");
   p1.tampilkanData();
@@ -36,5 +36,6 @@ public static void main(String[] args){
   p2.tampilkanData();
 
   System.out.println("Pasien 2 (nama dan umur)");
-  p2.tampilkanData(false)
+  p2.tampilkanData(false);
+}
 }
