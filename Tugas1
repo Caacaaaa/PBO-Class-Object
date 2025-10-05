@@ -4,38 +4,48 @@ public class Pasien{
   private int umur;
   private String penyakit;
 
+  // no argument constructor
   public Pasien(){
     this.nama = "Hanni";
     this.umur = 20;
     this.penyakit = "Flu";
   }
 
+  // parameterized
   public Pasien(String nama, int umur, String penyakit){
     this.nama = nama;
     this.umur = umur;
     this.penyakit = penyakit;
   }
 
+  // method overloading tanpa parameter
+  public void tampilkanData(){
+    System.out.println("Nama Pasien: " + nama);
+    System.out.println("Umur: " + umur + " tahun");
+    System.out.println("Penyakit: " + penyakit);
+}
+
+  // method overloading dengan parameter
   public void tampilkanData(boolean tampilkanPenyakit){
     System.out.println("Nama Pasien: " + nama);
-    System.out.println("Umur: " + umur + "tahun");
+    System.out.println("Umur: " + umur + " tahun");
     if (tampilkanPenyakit){
         System.out.println("Penyakit: " + penyakit);
-    }else{
+    } else {
         System.out.println("Penyakit: Tidak diketahui");
-  }
+}
 }
 
 public static void main(String[] args){
-  Pasien p1 = new Pasien();
-  Pasien p2 = new Pasien("Haerin", 21, "Demam");
+  Pasien p1 = new Pasien(); // no-argument constructor
+  Pasien p2 = new Pasien("Haerin", 21, "Demam"); // parameter constructor
 
   System.out.println("Pasien 1");
-  p1.tampilkanData();
+  p1.tampilkanData(); // tanpa parameter
   System.out.println("Pasien 2");
-  p2.tampilkanData();
+  p2.tampilkanData(); // tanpa parameter
 
   System.out.println("Pasien 2 (nama dan umur)");
-  p2.tampilkanData(false);
+  p2.tampilkanData(false); // dengan parameter
 }
 }
