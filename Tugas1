@@ -1,1 +1,7 @@
 public class pasien{
+
+  private String nama;
+  private int umur;
+  private String penyakit;
+
+}
